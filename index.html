@@ -1,0 +1,1554 @@
+﻿ 
+<!DOCTYPE html>
+<html lang="en"> 
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Perspicacious'18</title>
+<meta name="viewport" content="width = 940"> 
+<meta name="description" content="A National Level Technical Symposium organized by the Department of Computer Science and Engineering at Bannari Amman Institute of Technology, Sathyamangalam ,is a celebration of unconstrained thinking and love for the spirit of exuberant technology.
+">  
+<meta property="og:title" content="Perspicacious"> 
+<meta property="og:url" content="http://change-the-world.unltd.org.uk/">
+<meta property="og:image" content="http://change-the-world.unltd.org.uk/img/master-01.jpg">
+<meta name="google-site-verification" content="UCkPxv8ayZI1GdSIfvWYb7NfYYLXauxfASh950weH4M" />
+	 <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css\normalize.min.css">  
+      <link href="css\main.min.css" rel="stylesheet" type="text/css">  
+      <link href="css\media.min.css" rel="stylesheet" type="text/css">   
+      <link href="css\w3.css" rel="stylesheet" type="text/css">   
+<!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/ie8.min.css" />
+  <![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" type="text/css" href="css/ie7.min.css" />
+  <![endif]-->
+  <script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+
+
+//Disable right click script 
+//visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+var message="Sorry, right-click has been disabled"; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// 
+function disableCtrlKeyCombination(e)
+{
+//list all CTRL + key combinations you want to disable
+var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w');
+var key;
+var isCtrl;
+if(window.event)
+{
+key = window.event.keyCode;     //IE
+if(window.event.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+else
+{
+key = e.which;     //firefox
+if(e.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+//if ctrl is pressed check if other key is in forbidenKeys array
+if(isCtrl)
+{
+for(i=0; i<forbiddenKeys.length; i++)
+{
+//case-insensitive comparation
+if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+{
+alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+return false;
+}
+}
+}
+return true;
+}
+</script>
+
+<head>
+<style>
+.dropbtn {
+  
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<body class='hidden'> 
+   <div class='backtotopouter mobileHide'> 
+    <div class='backtotop'></div>
+    <div class='backtotopshaddow'></div>
+    <div class='backtotoptitle'></div>
+  </div> 
+  <!-- back to to rocket END -->  
+  <div id='ie7error'></div> 
+  <div class='ie7Hide'>
+    <!-- loading START -->
+    <div id='loading'>
+      <div class='loadingOuter'></div> 
+      <div class='loadingInner'></div> 
+      <div class='loadingJiffy'></div> 
+    </div>  
+    <!-- loading END -->
+
+    <div class='scroll_outer mobileHide'>
+      <div class='scroll_holder'>
+        <div class='scroll'></div>
+      </div> 
+    </div> 
+
+    	<div class='menu mobileHide'>
+		<div class='wrapper1'>
+			<ul>    		
+				<li><a href='javascript:void(0);' class='arial '  id='menu2'>Home</a></li>
+				<!--<li><a href='javascript:void(0);' class='arial' title='CONTEXT' >About</a></li>-->
+				<li><a href='javascript:void(0);' class='arial'   id='menu3'>ABOUT</a></li>
+				<li><a href='javascript:void(0);' class='arial'   id='menu4' >Events</a></li>
+								<li><a href='javascript:void(0);' class='arial'  id='menu6' >Register</a></li> 
+
+ 			 
+<div class="dropdown">
+<!--<button onclick="myFunction()" class="dropbtn">Dropdown</button>-->
+        <li><a onclick="myFunction()" class='arial dropbtn' >Uniq</a></li>
+				<li><a href='http://m.heyo.com/97fe0a' class='arial'  id='menu5' >Meme Creator</a></li>
+
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://www.uniqtechnologies.co.in/"  target="_blank">Uniq Technologies</a>
+    <a href="http://www.inplanttraining.org/"  target="_blank">IPT</a>
+    <a href="http://www.internshipinchennai.com/"  target="_blank">Internship</a>
+    <a href="http://www.ieeefinalyearprojects.org/"  target="_blank">IEEE project</a>
+    <a href="http://www.androidtraininginchennai.com/ "  target="_blank">Android Training </a>
+
+  </div>
+</div>
+			</ul>
+		</div>
+	</div>
+      <a href='javascript:void(0);' class='menuMarker' id='menu2top'></a>  
+	
+    <section id='section_1'> 
+      
+ <div class='relative'>
+ 
+     <div class='element2'>
+      <div class='asteroid1'></div>
+      <div class='asteroid2'></div>
+      <div class='asteroid3'></div>
+      <div class='asteroid4'></div>
+      <div class='asteroid5'></div> 
+   </div>
+     
+<!--
+   <div class='element3'><br><br><br>
+      <a href="https://www.facebook.com/perspicacious2k16/?ref=br_rs" target="_blank"> <div class='sprite_1'></div></a>
+   </div> -->
+
+   <div class='stars'> 
+   <div class='wrapper'> 
+   <div id='section_1_height'>  
+       <div class='center' style="z-index:9999999999999999;"> 
+   		<!--	<h1 style="color:black;"><span style="color:black;">Jan 20 , 2018<br></span></h1>--> 
+   			</div>   
+         <!--<div class='sprite_9'></div>
+         --><div class='ph20'></div>
+   		<div class='atlas_outer'> 
+            <div class='' id='atlas_overlay'></div> 
+   			<div id='atlas' class='loop_1'></div>
+   		</div> 
+   			<h1 style="color:black;"><span style="color:black;"><img src="img/sprite/header.gif"></span></h1> 
+			
+   			<!--<h1 style="color:black;"><span style="color:black;"><img src="img/sprite/1234.png" ></span></h1> -->
+		
+   		
+			
+<br>			
+      <div class='sprite_2'></div> 
+         </div>
+</div>   
+</div>
+</div> 
+ <!--<div class='element4'><br> <br> <br> 
+<a onclick="document.getElementById('id11').style.display='block'">
+     
+	 <div class='sprite19'></div></a>
+   </div>-->
+ 
+    </section>
+    <div class='gradient'>  
+      <a href='javascript:void(0);' class='menuMarker' id='menu3top'></a>  
+      <section id='section_2' style="background:#2f8dc1">  
+        
+<div class='stars'> 
+	<div class='section_inner'>  
+
+				<div class='wrapper'>  
+			<h2 class='arial'>ABOUT PERSPICACIOUS’18</h2>
+
+			<div class='ph70'></div> 
+		
+			</div>
+
+			<div class='elementbg1 mobileHideBG'> 
+		<div class='wrapper'>  
+	<div class=''>
+				<div class='large_flip_outer'>
+				<img class='large_flip' id='large_flip1' src='img\section2\intro_1.png' alt=''> 
+				<div id='large_flip_1'></div>
+			</div>
+			</div>	
+			<div class='' align="center">
+ 				<div class='ph20'></div>
+				<p  style=" text-align:justify;">A National Level Technical Symposium organized by the Department of Computer Science and Enginenering at Bannari Amman Institute of Technology Sathyamangalam, is a celebration of unconstrained thinking and love for the spirit of exuberant technology. </p>
+				<div class='ph20'></div>
+				<p style=" text-align:justify;">This  technical fest, stretches over two days during 24th and 25th of January 2018.  </p>
+			<p style=" text-align:justify;">Apart from the fun, frolic and platform that it offers to students to exhibit their talents, this technical symposium aims at encouraging innovative thinking among young aspirants which leads to profound technical insights.</p>
+				<p style=" text-align:justify;">
+				The entire environment is planned to give a conducive atmosphere for a holistic learning.
+				</p>
+			</div>
+ 
+			</div>
+			</div>
+
+
+			<div class='elementbg2 mobileHideBG'> 
+		<div class='wrapper'>  
+			<div class='ph80'></div>
+			<div class='c1'>&nbsp;</div>
+			<div class='c2-c6'>
+				<div class='ph50'></div>
+							</div>	
+	
+			<br style='clear:left;'> 
+
+		</div>  
+
+	</div>
+	
+	
+
+
+		<div class='elementbg3 mobileHideBG'> 
+	<div class='wrapper center'>   
+			<div class='ph70'></div>
+				<h3 class='arial'>Join us to experience the pageant you surely would not have savored before.</h3>	
+				<div class='ph10'></div> 
+		</div>  
+	</div>
+
+		
+		<div class='rocket_outer'>
+			<div class='rocket forward'></div>  
+		</div> 
+	</div>
+</div>  
+ 
+ 
+      </section>
+      <a href='javascript:void(0);' class='menuMarker' id='menu4top'></a>  
+      <section id='section_3'> 
+        <div class='stars'> 
+  <div class='section_inner'> 
+
+          <div class='bg1 mobileHideBG'>
+
+    <div class='wrapper center'> 
+ 
+      <h2 class='arial'>Events</h2> 
+	  <p>Common to All Departments</p>
+    </div>
+	<br>
+    </div>
+
+
+
+
+   
+   
+    
+    
+ 
+    <div class='wrapper center'>  
+      
+      <div class='icons' id='load_rollovers_1'>  
+        
+		<a onclick="document.getElementById('id01').style.display='block'" >
+		<div class='col'>
+          <div class='icon icon1'>
+            <div class='iconImage'></div>  
+          </div> 
+
+          <h5 class='arial'>PAPERUS PRESENTA </h5>
+          <div class='p10'></div>
+         <!-- <p>An investment in knowledge pays you best interest</p>-->
+        </div></a>
+		 
+		 
+		 <a onclick="document.getElementById('id02').style.display='block'" >
+        <div class='col'> 
+         <div class='icon icon2'>
+          <div class='iconImage'></div>  
+        </div> 
+        <h5 class='arial'>DECIDE YOUR DEFT </h5>
+        <div class='p10'></div>
+      <!--  <p>Fuel your brain to ideate the ideas that never existed</p>-->
+      </div></a>
+	  
+	  
+	  <a onclick="document.getElementById('id03').style.display='block'">
+      <div class='col'> 
+       <div class='icon icon3'>
+        <div class='iconImage'></div>  
+      </div> 
+      <h5 class='arial'>WORKSHOP</h5>
+      <div class='p10'></div>
+          <!--  <p>When the world is your classroom, you go places</p>-->
+    </div></a>
+	
+		  <a onclick="document.getElementById('id04').style.display='block'">
+
+    <div class='col'>
+     <div class='icon icon4'>
+      <div class='iconImage'></div>  
+    </div>  
+    <h5 class='arial'>TEXVIKO-KWIZZ</h5>
+    <div class='p10'></div>
+       <!--   <p>Time to put those thinking caps on.-->
+</p>
+  </div></a>
+  	  <a onclick="document.getElementById('id05').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon5'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>HACKATHON</h5>
+  <div class='p10'></div>
+       <!-- <p>First, solve the problem. Then, write the code</p>-->
+</div></a>
+<br><br><br><br><br><br><br><br>	<br>
+
+
+ <a onclick="document.getElementById('id20').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon61'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>Mr.GEEK</h5>
+  <div class='p10'></div>
+       <!-- <p>A code without a proper structure is as good as no code</p>-->
+</div></a>
+<a onclick="document.getElementById('id21').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon62'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>CLASH OF CODERZ</h5>
+  <div class='p10'></div>
+       <!-- <p>A code without a proper structure is as good as no code</p>-->
+</div></a>
+
+
+
+ <a onclick="document.getElementById('id06').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon6'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>BRAINIACS</h5>
+  <div class='p10'></div>
+       <!-- <p>A code without a proper structure is as good as no code</p>-->
+</div></a>
+
+<a onclick="document.getElementById('id07').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon71'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>ANIMATRIX</h5>
+  <div class='p10'></div>
+  <!--<p>People who are crazy enough to think can change the world</p>-->
+</div></a>
+
+
+
+<a onclick="document.getElementById('id08').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon8'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>MEME CREATOR</h5>
+  <div class='p10'></div>
+
+</div></a>
+
+<br><br><br><br><br><br><br><br><br><br>
+<a onclick="document.getElementById('id09').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon9'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>CLICK THE UNCLICK </h5>
+  <div class='p10'></div>
+ <!-- <p>Stop fretting and start clicking	</p>-->
+</div></a>
+
+
+
+
+<a onclick="document.getElementById('id10').style.display='block'">
+
+  <div class='col'> 
+   <div class='icon icon63'>
+    <div class='iconImage'></div>  
+  </div> 
+  <h5 class='arial'>FUN EVENTS</h5>
+  <div class='p10'></div>
+  <!--<p>There is no fear when you are having fun	</p>-->
+</div></a>
+</div></a>
+<br style='clear:left;'>
+</div> 
+<div class='ph70'></div>  
+</div>
+
+<div class='orangeBall'>
+  <div class='wrapper'>
+    <div class='center'>  
+    </div> 
+    
+  </div>
+</div> 
+
+
+</div> 
+
+
+
+
+</div> 
+      </section>
+      <a href='javascript:void(0);' class='menuMarker' id='menu3top'></a>  
+      <section id='section_4'> 
+        <div class='stars'>   
+     <div class='section_inner mobileHideBG'>
+      <!-- <div class='wrapper'>  
+          <h2 class='arial'>SUPPORTING YOUNG PEOPLE</h2>
+          <div class='ph50'></div>
+          <div class='c3-c10 gridAuto center'>
+           <p>We've found that there are many young people who would like to set up their own business .</p>
+
+           <div class='ph20'></div>
+           <p>Over a quarter of young people who are interested in setting up a business want to establish a social enterprise (27%) and are significantly more likely to want to do so than the general population <a href='https://unltd.org.uk/wp-content/uploads/2014/06/Populus_RBS-Enterprise_Tracker_2nd-Quarter_2014_Report.pdf' target='_blank' class='source'>(source)</a>.</p>
+         </div> 
+ 
+         <div class='flipAroundFaces'>
+          <div class='face face1'><img src='img\section4\face1.png' alt=''></div>
+          <div class='face face2'><img src='img\section4\face2.png' alt=''></div>
+          <div class='face face3'><img src='img\section4\face3.png' alt=''></div>
+          <div class='face face4'><img src='img\section4\face4.png' alt=''></div>
+          <div class='face face5'><img src='img\section4\face5.png' alt=''></div>
+          <div class='face face6'><img src='img\section4\face6.png' alt=''></div>
+          <div class='face face7'><img src='img\section4\face7.png' alt=''></div>
+          <div class='face face8'><img src='img\section4\face8.png' alt=''></div>
+          --<div class='center_planet' id='s4_load_faces'>
+            <p>Sponcer</p>
+          </div>--       
+        </div> 
+    
+
+ 
+ 
+
+</div>-->
+ 
+
+
+<!--sponsers
+
+<div class='wrapper'>
+
+
+<div class='ph90'></div>  
+ 
+
+  <div class='c3-c10 gridAuto center'>
+    <h1 class='font_40 arial'>Sponcer</h1>
+  </div> 
+
+
+<div class='ph50'></div> 
+
+
+
+  <div class='center c1-c4'>
+        <div class='medium_flip_outer'>
+        <img class='medium_flip' id='medium_flip1' src='img\section4\big_1.png' alt=''> 
+        <div id='medium_flip_1'></div>
+      </div>    
+    <div class='ph20'></div>
+    <p>The creative and practical learning environment helps young people to develop new skills, and to apply the skills they have learned through formal education in a meaningful way.</p>
+</div> 
+
+  <div class='center c5-c8'> 
+   <div class='medium_flip_outer'>
+        <img class='medium_flip' id='medium_flip2' src='img\section4\big_2.png' alt=''>  
+      </div>  
+    <div class='ph20'></div>
+    <p>An UnLtd Award lets young people lead and take ownership of their own idea, and to 'learn by doing'.</p>
+</div> 
+
+  <div class='center c9-c12'> 
+   <div class='medium_flip_outer'>
+        <img class='medium_flip' id='medium_flip3' src='img\section4\big_3.png' alt=''> 
+        <div id='medium_flip_3'></div>
+      </div>  
+<div class='ph20'></div>
+    <p>The Award has symbolic value. It shows that UnLtd believes in the young person and brings validation and credibility.</p>
+</div>
+<br style='clear:left;'>
+
+
+ 
+
+   
+
+ 
+ 
+
+<div class='ph90'></div>
+
+
+<div class='c3-c10 gridAuto center'>
+  <!--<p>Alongside our direct Award-making, we are delivering events to build and strengthen networks, and developing campaigns to generate more support for young social entrepreneurs. 
+  </p>
+</div>
+
+
+</div> -->
+
+<div class='bg4 mobileHideBG'>
+<div class='videos'> 
+   <!--<img src='img/section4/tv1.png' alt='' class='frame1'/>
+   <img src='img/section4/tv2.png' alt='' class='frame2'/>
+   <img src='img/section4/tv3.png' alt='' class='frame3'/>
+   <img src='img/section4/tv4.png' alt='' class='frame4'/>-->
+   <div class='video video1 s4_button_1_video'>
+   <iframe width="569" height="320" src="//www.youtube.com/embed/NrcX028ZdCQ" frameborder="0" allowfullscreen></iframe>
+   </div>
+   <div class='video video2 s4_button_2_video'>
+   <iframe width="569" height="320" src="//www.youtube.com/embed/NrcX028ZdCQ" frameborder="0" allowfullscreen></iframe>
+   </div>
+   <div class='video video3 s4_button_3_video'>
+   <iframe width="569" height="320" src="//www.youtube.com/embed/NrcX028ZdCQ" frameborder="0" allowfullscreen></iframe>
+   </div>
+   <div class='button button1' id='s4_button_1'></div>
+   <div class='button button2' id='s4_button_2'></div>
+   <div class='button button3' id='s4_button_3'></div>
+   <div class='frame1 mobileHide'></div><div class='frame2 mobileHide'></div><div class='frame3 mobileHide'></div><div class='frame4 mobileHide'></div><!-- <img src='img/section4/tv1.png' alt='' class='frame1'/><img src='img/section4/tv2.png' alt='' class='frame2'/><img src='img/section4/tv3.png' alt='' class='frame3'/><img src='img/section4/tv4.png' alt='' class='frame4'/> -->
+  <p class='vid_description'></p><div class='video video1 s4_button_1_video'>
+<iframe width="560" height="315" src="//www.youtube.com/embed/NrcX028ZdCQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>  </div> </div>
+</div>
+
+
+
+
+ 
+</div> 
+<div class='start_loop_2 clouds_outer clouds_outer_mobile'>
+
+<div class='s5_h2'>
+<a href='javascript:void(0);' class='menuMarker' id='menu6top'></a>  
+
+  <h2 class='arial'></h2>
+</div>
+  <div class='loop_4 clouds '>
+  <a href='javascript:void(0);' class='menuMarker' id='menu4top'></a>
+</div>
+  <div class='loop_3 clouds2'></div>
+  <div class='cloudsBG'></div>
+
+
+  <div class='s4_atlas_outer'>  
+    <div id='s4_atlas_overlay'></div>
+    <div id='s4_atlas' class='loop_2'></div>
+  </div>  
+</div> 
+
+</div> 
+      </section> 
+    </div>    
+    <section id='section_5'>
+        <div class='section_inner '> 
+ 	<div class='bg mobileHideBG'>
+ 		<div class='hotBalloons loop_7 mobileHideBG'> </div>
+ 		<div class='wrapper'>   
+
+		
+ 			<div class='right'>
+				<div class='balloon'>
+ 			
+				<div class='sprite151'>
+					<a href="" target="_black">
+
+				<img src="img/sprite/reg.png" >
+				</a> 
+				</div>
+					 					
+
+ 				</div>
+ 				<div class='balloon'>
+ 					<div class='sprite15'></div> 
+					 					
+
+ 				</div>
+			
+ 			</div>  			
+ 						
+ 			
+
+
+
+
+
+ 		</div>
+
+
+ 		<div class='wrapper'>   
+
+ 			
+
+			
+ 			
+
+
+ 	
+
+
+	
+
+
+ 		</div> 
+ 		
+ 	</div>
+ </div> 
+ 
+    </section>
+    <section id='section_6'>  
+       
+  <div class='loop_5 clouds '> 
+    <div class='buildings start_loop_5'> 
+      <div class='ph20'></div>  
+<div class='wrapper unleash'> 
+      <div class='c1-c12 gridAuto'><h2 class='arial'>UNLEASHING THE POTENTIAL OF YOUNG ENGINEERS</h2></div>
+      <div class='c3-c10 gridAuto'><p class='p2 arial'>ON <br> 24 - 01 - 2018 & 25 - 01 - 2018</p></div> 
+    </div>   
+   <div class='ph70'></div>
+       <a href='javascript:void(0);' class='menuMarker' id='menu5top'></a>  
+
+   <div class='curb'>  
+   <div class='neon number active' style="font-size:100px;">Contact</div>
+	<br>
+	<br>
+  <div class='neon text'>
+  <br>
+  <p>Mohamed Afzal : 7402637728</p>
+   <p>Manasa prakash : 9843328930</p>
+<!--<p>Mahesh Kumar :7373573062</p>
+<p>Arunthathi :9585502505</p>-->
+  <p><br>Email: perspicacious@bitsathy.ac.in</p>
+  </div>
+    
+
+         <div class='sprite16'></div>    
+  </div> 
+  </div>
+  </div>
+  <!--team
+  <div class='section_6_bottom'> 
+  <div class='wrapper'>
+        <div class='ph70'></div> 
+    <div class='c2-c11 gridAuto'><p class='p2 arial'>Our Team </p></div>
+    <div class='ph70'></div>  
+        <div class='c1-c4'>
+      <div class='flip_block flip_block_row_1'>
+        <img src='img\section6\block1.jpg' id='flip1' alt='PROVIDING POSITIVE ACTIVITIES FOR YOUNG PEOPLE' > 
+        <h3 class='arial'>PROVIDING POSITIVE ACTIVITIES FOR YOUNG PEOPLE:</h3>
+        <p>A lack of positive activities is a common challenge for young people, and for the majority of our Award Winners this is a key issue they address.</p>
+      </div>
+    </div>
+    <div class='c5-c8'>
+      <div class='flip_block flip_block_row_1'>
+        <img src='img\section6\block2.jpg' id='flip2' alt='CREATING A SENSE OF BELONGING'>
+        <h3 class='arial'>CREATING A SENSE OF BELONGING:</h3>
+        <p>We have found that projects help other young</p>
+      </div>
+    </div>
+    <div class='c9-c12'>
+      <div class='flip_block flip_block_row_1'>
+        <img src='img\section6\block3.jpg' id='flip3' alt='CHALLENGING STEREOTYPES'>
+        <h3 class='arial'>CHALLENGING STEREOTYPES:</h3>
+        <p>Many of the young people we  </p>
+      </div>
+    </div>
+
+    <br style='clear:left;'>
+    <div id='startFlip1'></div>
+    <div class='ph70'></div> 
+    <div class='c1-c2'>&nbsp;</div>
+    <div class='c3-c6'>
+      <div class='flip_block flip_block_row_2'>
+        <img src='img\section6\block4.jpg' id='flip4' alt='CREATING A SENSE OF BELONGING'>
+        <h3 class='arial'>SUPPORTING SKILLS AND PERSONAL DEVELOPMENT IN OTHERS: </h3>
+        <p>Just as Award Winners develop skills by running their projects, the young people they work with often gain skills too. They often provide training (in a specific sport, for instance), as well as give participants a form of work experience or volunteering experience.</p>
+      </div>
+    </div>
+    <div class='c7-c10'>
+      <div class='flip_block flip_block_row_2'>
+        <img src='img\section6\block5.jpg' id='flip5' alt='CHALLENGING STEREOTYPES'>
+        <h3 class='arial'>RAISING ASPIRATIONS AND INSPIRING OTHERS:  </h3>
+        <p>Award Winners show how young people can be proactive and capable of creating positive social outcomes. Our experience and evidence is that this influences other young people to think about social issues and how they might set up their own projects.</p>
+      </div>
+    </div>      
+    <br style='clear:left;'>  -->	
+    <div id='startFlip1-2'></div>
+     <div class='ph90'></div>   
+	   <div class='c2-c11 gridAuto'>
+	   <p class='p2 arial'>Our Sponsors </p></div>
+     <div class='window_animation mobileHide'>
+        <img src='img\section6\uniq.png'  class='window_frame ' alt=''>  
+       <div class='window_back'></div>
+      </div>
+     <div class='ph90'></div> 
+  </div>
+  </div> 
+ 
+
+
+
+
+ <div id='startFlip1-2'></div>
+     <div class='ph90'></div>   
+     <div class='c2-c11 gridAuto'>
+     <p class='p2 arial'>Our Memories </p></div>
+     <div class='window_animation mobileHide'>
+        <img src='img\section6\windows.png' class='window_frame ' alt=''>  
+       <div class='window_back'></div>
+      </div>
+     <div class='ph90'></div> 
+
+
+
+
+
+
+
+   
+    </section>
+	  <section id='section_7'> 
+      
+ 
+ <div class='section_inner'> 
+ <div class='bricks'> 
+ <div class='windows mobileHideBG'> 
+   <div class='bg_top'></div>  
+   <div class='wrapper center'>   
+     <h2 class='arial'>PRACTICE like you 	have never won<br>PERFORM like you have never lost</h2>
+     <h2 class='arial'>Sponsored By<br><a style="color:blue"href="https://www.uniqtechnologies.co.in/"  target="_blank">Uniq Technologies</h2>
+         
+</div>  
+</div>  
+</div>
+</div> 
+
+   
+<div class='office center'> 
+<div class='wrapper relative'> 
+   <div class='ph50'></div>
+<div class='we_believe'><span class='office_fade arial'> </span></div>
+
+ <div id='s7_start_fade'></div>
+   <div class='ph80'></div> 
+<div class='to_change arial'>
+<div class='office_fade fade_1'> 
+<div class='ph10'></div>
+WE BELIEVE
+</div> 
+</div> 
+<div class='to_change arial'>
+<div class='office_fade fade_2'> 
+<div class='ph10'></div>
+IN THE POTENTIAL OF YOUNG PEOPLE
+</div>  
+</div> 
+<div class='to_change arial'>
+<div class='office_fade fade_3'> 
+<div class='ph10'></div>
+ TO CODE THE WORLD
+</div>
+</div> 
+   <div class='ph10'></div> 
+    <div class='earth_outer'> 
+      <div id='earth_overlay'></div> 
+        <div id='earth' class='loop_8'></div>
+      </div>  
+</div>
+</div>
+<div class='mobileHide'>
+<div class='road start_loop_6'>
+ <!-- <div class=' loop_6 bus mobileHideBG'></div> -->
+  <div class='roadColours mobileHideBG'>
+<div class='row1 mobileHideBG'></div>
+<div class='row2 mobileHideBG'></div>
+<div class='row3 mobileHideBG'></div>
+</div>
+
+ </div>
+
+ </div>
+ 
+
+ 
+
+   
+    </section> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<div class='bottom default'>  
+
+  <div align="center" style="background-color:white";> 
+ 
+             <span style="color:black"> Made with code by </span>     <span class="logo-title"><span style="color:#2196f3"></span>
+			
+						<a href="register" style="text-decoration:none"><span style="color:#04aee2">Geek</span><span style="color:#fa7400">stack</span></span></a>
+        
+</div>
+</div> 
+ </div> 
+
+
+  
+
+
+<script src="resources\jquery.min.js"></script>   
+<script src="resources\charts\chart_data.min.js"></script>  
+ <script src="resources\inview.min.js"></script> 
+<script src="resources\functions.min.js"></script>  
+<script src="resources\loaded.min.js"></script>  
+<script src="resources\charts\Chart.min.js"></script> 
+<script src="resources\jquery-ui-1.11.0.custom\jquery-ui.min.js"></script> 
+  <!-- Designed, built and loved by Blue Stag Studio -->
+</body>
+<!--modalsss-->
+<!--modal paper-->
+<div id="id01" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >PAPERUS PRESENTA (Paper Presentaion) <br>“An investment in knowledge pays you best interest“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>Let your ideas surmount the <b>“Limits of Imagination”</b>. Compete with the sharpest minds in the Computer Science bandwidth and lock horns with the best of all while standing the ground!<br>
+		<br>
+		<strong>TOPICS:</strong><br>
+		1.   Artificial Intelligence and Expert Systems<br>
+2.    Big Data Analytics<br>
+3.    Cloud Computing<br>
+4.    Data Mining<br>
+5.    Internet of Things<br>
+6.    Sensor Network<br>
+7.    Social Network<br>
+8.       Quantum computing<br>
+9. And other innovative ideas on  
+	10.	Emerging trends in the field of Computer Science are also welcome.<br>
+<br>
+		<strong>DETAILS:</strong><br>
+•	The abstract should contain Name, Department, Email-id, Contact number and Institution name of the participants.<br>
+•	The participants will be expected to make a 5 minute presentation on the topic and attend 2 minute query session.<br>
+•	The participants should bring 2 hard copies of the paper on the day of th 	e event.<br>
+•	Plagiarism is strictly prohibited.<br>
+•	ID card is mandatory.<br>
+•	The shortlisted paper will be intimated through an e-mail.<br><br>
+<strong>RULES:</strong><br>
+		•	Each team can have a maximum of two participants.<br>
+		•	The abstract of the paper should be in IEEE FORMAT and should be sent on or before "18.01.2018" to this e-mail id"<b>paperuspresenta@gmail.com</b>".<br>
+		•	The selected participants will be intimated on or before "19.01.2018" through e-mail.<br><br>
+		
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+
+
+
+<!--modal idea-->
+<div id="id02" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id02').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >DECIDE YOUR DEFT (Idea Presentation)<br>“Fuel your brain to ideate the ideas that never existed“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>This contest provides a competing platform where communicating about your idea becomes an art.
+		<br>
+		<strong>Provide ideas and solution to the industrial problems.</strong><br><br>
+<b>TOPICS:</b><br>
+
+1. 	WiFi is a widely used transmission medium in the world. Though it is a very secured transmission medium , the password of the specific Wi-Fi network can be hacked. In the recent trends , LiFi (Light Fidelity) which uses visible light as a medium transmits data with higher transmission rate than WiFi.Is it possible to design a circuit to transmit any form of data (For eg.,audio or video) from the transmission end to receiving end?<br>
+2. 	If you are travelling in a vehicle on a busy road. you have been distracted by the head light of the other vehicle, it may cause the accident .in order to reduce that kind of accident  as a technical person what should you do?<br>
+
+3. 	In recent times  it is to note that the image in the internet can be downloaded by any individual in the world. It is essential to intimate that the picture is being downloaded by other .Give some techniques to find out.<br>
+
+4. 	Nowadays most of the exams are online. Recently it is found that some people are undergoing misbehaviour activities in the form of impersonation .Help them with the solution. <br>
+
+5. 	Design a solution to solve the problem of varying image size while opening same images in different browsers.<br>
+
+6. 	Develop a system to help visually challenged people to use mobile phones efficiently for  their travel without any assistance.<br>
+
+7. 	Is the present security for Cloud storage is enough or we need to enhance it?<br>
+
+8. 	Which programming language is both time and cost effective that can be used to code for android programming other than Java? Justify your answer?<br>
+
+9.	Farmers needs to know the amount of moisture content in the soil so that it will be easier for them to supply water according to the need of the crops and physical work is required for the supply of the water... Help them out with IOT.<br>
+
+10. 	Is it possible to make the Charging of the vehicles easier ?!<br><br>
+		
+		
+		
+		
+		<br><strong>RULES:</strong><br>
+• 	Only 2 members per team can participate.<br>
+• 	Abstract of the Solution for the problem(any one) should be sent on or before "18.01.2018" to the e-mail id "<b>deft2k18@gmail.com</b>". <br>
+• 	The more feasible solution will be selected and intimated through mail on or before "19.01.2018". <br>
+•   Selected participants should present the Powerpoint presentation (should not exceed 15 slides). <br><br>
+
+<strong>ROUND 1:</strong><br>
+• The Participant should  present their solution in the form of powerpoint presentation.<br>
+• 	Duration - 5 minutes (3 minutes for presentation and 2 minutes for query). <br>
+• 	The team with optimal solution will be selected for the second round.<br>
+•  Judge's decisions are final. <br>
+
+
+<strong>ROUND 2:</strong><br>
+• 	 Problems will be provided to the shortlisted participants on the spot. <br>
+•   Participants should present their solutions for which  Powerpoint presentation is not necessary.<br>
+
+	
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button></a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+<!--modal workshop-->
+<div id="id03" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id03').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >WORKSHOP<br>“When the world is your classroom, you go places“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>Learn and engage with the brightest minds to understand what goes into creating true impact and building a better world.
+		<br><br>
+		<strong>DETAILS:</strong><br>
+			• Registration : on spot (First come First serve basis)<br>
+			• Workshop Fee : RS.300 (Excluding common registration fee)<br><br>
+		<strong>TOPIC:</strong><br>
+• 		TensorFlow (Machine Learning)<br>
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button></a>
+			<br><br>	</p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+   
+<!--modal quiz-->
+<div id="id04" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id04').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >TEXVIKO-KWIZZ (Technical Quiz)<br>“Time to put those thinking caps on“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>A newbie with no prior experience or a veteran, there's at least one prize you can bag and earn bragging rights, if you're willing to work for it! Come, get your minds charged!!
+		<br><br>
+	<!--	<strong>Topic:</strong><br>
+		soon
+<br><strong>Details:</strong><br>
+soon
+-->
+<b>RULES:</b><br>
+• single participants per team.<br><br>
+
+<b>ROUND 1:</b><br>
+
+• It is paper pen Preliminary round.<br>
+• Consist of 25 Questions.<br>
+<b>ROUND 2:</b><br>
+• It is paper pen Presentation round.<br>
+• Consist of 20 questions.<br>
+<b>ROUND 3:</b><br>
+• It is a Lighting Round.<br>
+• Limited time will be provided for each questions.<br>
+
+
+
+
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button></a>
+			<br><br>	</p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+<!--modal hackathon-->
+<div id="id05" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id05').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >HACKATHON<br>“First, solve the problem. Then, write the code“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p> 
+
+<br>
+		• Love coding?? Know all the coding languages?? You think you know it all? If you are the best of the rest, then here is a chance to prove it.<br>
+• 		Hackathon is an open challenge to all the geeks out there.
+<br>•  The Problem statements will be given onspot.<br>
+•  Come and quench your thirst.<br>•  Accept the challenge and test the coder in you. <br> 
+• The events starts at 24/01/2018 (5 p.m) to 25.01/2018 (5 p.m)		<br><br>
+		
+<b>RULES:</b><br>
+• 2 or 3 participants per team.<br>
+• 24-hours event<br>
+<br>		
+		
+		
+	<!--	<strong>Topic:</strong><br>
+		soon
+<br><strong>Details:</strong><br>
+soon
+-->
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+<!--modal mysql-->
+<div id="id06" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id06').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >BRAINIACS (MySQL): <br>“A code without a proper structure is as good as no code“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p> The event will test the ingenuity of the participants at handling the concept, design and syntax of SQL. The world thrives on data; let’s see how well data thrives on your code!
+		<br>
+			<br>
+		
+		<strong>RULES:</strong><br>
+		   Single participants are allowed.<br>		<br>
+	
+		
+		<b>ROUND 1:</b><br>
+	• 	20 MCQs will be given to the participants.<br>
+	• 	Shortlisted participants will proceed to Second round.<br>
+		<b>ROUND 2:</b><br>
+
+• 	10 queries will be given to the participants.<br>
+	• 	Shortlisted participants will proceed to Finals.<br>
+
+		<b>ROUND 3:</b><br>
+
+	• 	3 queries and 2 PLSQL questions will be given.<br>
+
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  <!--poster-->
+  <div id="id07" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id07').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >ANIMATRIX (Poster Designing)<br>“People who are crazy enough to think can change the world“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>It emphasizes the ability to deliver a visual presentation with the peer-reviewed paper poster.
+		<br><br>
+		
+		
+				<strong>RULES:</strong><br>
+		   • 	Single participants are allowed.<br>
+• 	Laptops are Mandatory.<br>
+• 	Participants can use any softwares for designing.<br>
+
+
+		   <br>
+	
+		<!-- <strong>Rules</strong><br>soon-->
+		<b>ROUND1:</b><br>
+		• 	Quiz will be conducted based on designing.<br>
+		• 	The participants have to answer the picture based questions.<br>
+	<b>ROUND2:</b><br>
+		• 	The participant will be given a theme(on spot).<br>
+		• 	Based on the theme the participants have to design a poster.
+			<br><br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  <!--memes-->
+  <div id="id08" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id08').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >MEME CREATOR<br>“Can you bring your wit and humor to create hilarious memes in this event?	“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p> Why should engineers always code? Let us also have some fun. Provides individuals a platform to showcase their skills in a first of its kind event.
+		<br><br>
+		<strong>RULES:</strong><br>
+● Participants can be an individual or a team(maximum 2 persons per team)<br>
+● The topics for the meme will be given only at the time of the event. <br>
+● The meme should be made as unique as possible and not be 	 indecent.<br>
+● During validation if any of the memes violates the above rule ,the participants will be disqualified.<br>
+
+
+● Duration: 1 hour.<br>
+
+<br>
+
+
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  <!--photo-->
+  <div id="id09" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id09').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >CLICK THE UNCLICK (Photography)<br>“Stop fretting and start clicking“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p> We call out all the budding talents to blend their divergent thinking. 	
+		<br>
+		<br>
+		<b>RULES:</b><br>
+			• 	The participants should mail their Snaps of their photoshoot along with their details on or before "18.01.2018" to the e-mail id"<b>clicktheunclick@gmail.com</b>".<br>
+			• 	The selected participants will be intimated through e-mail on or before "19.01.2018".<br>
+			• 	Participants should bring their cameras.<br>
+			
+		
+		
+<b>ROUND1:</b><br>
+		• 	The participant will be given a theme(on spot).<br>
+		• 	Based on the theme the participants have to take a picture.<br>
+		
+		• 	The Shortlisted participants will  proceed to next round.<br>
+		<b>ROUND2:</b><br>
+		• 	The Shortlisted participants with another onspot theme.<br>
+		• 	Based on the theme the participants have to take a picture.<br><br>
+
+
+
+		
+
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  <!--fun-->
+  <div id="id10" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id10').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >Fun Events<br>“There is no fear when you are having fun“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>With unusual freaky events, find the festive spirit alive. Lose yourself and enjoy to the fullest.	
+		<br>
+		
+		
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+			<br><br>
+		</p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  <!--reg-->
+  <div id="id11" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id11').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >Registration</h2>
+      </header>
+      <div class="w3-container " style="color:black">	
+		<br>
+		
+			<br>
+			
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Click here to Register</button>
+					</a>
+			<br><br>
+		</p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+<!--modal MR.GEEK-->
+<div id="id20" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id20').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >MR.GEEK (Coding Event)<br>"when life gives you questions,google has Answers“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>A good programmer is someone who always looks both the ways before crossing a one-way
+street, but do you look? Let’s find out, bring out the programmer in you. Mr.Geek  is a
+programming contest that enables to express all your programming skills. <br>
+	<strong>RULES:</strong><br>
+
+• Each team should consist of 2 members<br>
+
+• Teams involved in any kind of malpractice will be immediately disqualified<br>
+
+• Decisions made by the Judges will be final. <br>
+
+<b>ROUND 1:</b><br>
+
+• It consists of Technical multiple choice questions.<br>
+• Shortlisted participants will proceed to next round.<br>
+
+<b>ROUND 2:</b>
+<br>
+• It is defensive programming round. <br>
+• Shortlisted participants will proceed to next round.<br>
+
+<b>ROUND 3:</b><br>
+
+
+• It is a web page designing round.<br>
+Participants has to 
+create a website as per the instruction provided.
+<br><br>
+ Think you’re into this? Then come on in and find 
+it out. Become Mr.Geek of the contest.
+<br>
+
+
+</p>
+
+
+	<br>
+	
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+<!--modal clash of coderz-->
+<div id="id21" class="w3-modal " id="" style="z-index:999999999999999999999;">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('id21').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style="color:black;font-size:24px" >Clash of Coderz (Coding Event)<br>"Measuring programming progress by lines of code is like measuring aircraft building progress by weight“</h2>
+      </header>
+      <div class="w3-container " style="color:black">
+        <p>This is a coding platform to test your coding skills.
+<br><br>
+	<strong>RULES:</strong><br>
+	• 	Maximum 3 participants per team.<br><br>
+<p><b>ROUND 1:  </b> 
+"Correct the Incorrect"<br>
+
+• 	Each team is given a set of questions. <br>
+• 	Questions will be taken from basics of programming.<br>
+
+<b>ROUND 2:   </b>
+"Invisible codes"<br>
+
+• 	Some Simple programs are provided for the Participants.<br>
+• 	Participants should solve the programs without the use monitors.<br>
+
+<b>ROUND 3:  </b>
+ "One on One battle"<br>
+
+• 	Only 2 participants are selected to the last round. <br>
+• 	Five programs will be give to each participants. <br>
+• 	The Participant which solves the programs first will be considered winner and other participant gets the second prize. <br>
+</p>
+
+
+
+	<br>
+	
+					<a href="register" target="_black">
+					<button onclick="" class="w3-button w3-black"> Register</button>
+					</a>
+				<br><br></p>
+         
+      
+    </div>
+  </div>
+  </div>
+  
+   <script>
+    /*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+	
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117|| e.keyCode === 93)) {//Alt+c, Alt+v will also be disabled sadly.
+                //alert('not allowed');
+            }
+            return false;
+    };
+	
+	$("input").keydown(function (e) {
+    if (e.keyCode == 93) {
+        alert('rightclick');
+    }
+});
+	
+	
+    </script>
+  
+  
+
+</html>
