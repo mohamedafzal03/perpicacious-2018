@@ -1,0 +1,2 @@
+[22-Dec-2017 11:14:49 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/vinith127965/public_html/geekstack_clients/perspica/mail/server.php on line 21
+[22-Dec-2017 11:14:49 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/vinith127965/public_html/geekstack_clients/perspica/mail/server.php on line 21
